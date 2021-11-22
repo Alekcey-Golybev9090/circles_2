@@ -21,7 +21,7 @@ class MyWindow(QMainWindow):
         if self.do_paint:
             qp = QPainter()
             qp.begin(self)
-            qp.setPen(QColor(255, 242, 0))
+            qp.setPen(QColor(randrange(0, 256), randrange(0, 256), randrange(0, 256)))
             r = randrange(5, 200)
             qp.drawEllipse(100, 150, 2 * r, 2 * r)
             qp.end()
