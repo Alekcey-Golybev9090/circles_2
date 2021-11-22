@@ -1,15 +1,15 @@
 import sys
 
-from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QColor
 from random import randrange
+from UI import Ui_MainWindow
 
 
-class MyWindow(QMainWindow):
+class MyWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setupUi(self)
         self.do_paint = False
         self.btn_create.clicked.connect(self.create_circle)
 
